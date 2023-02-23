@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "BetterSUAI",
+    "description": "Chrome plugin for SUAI. Improve visuals",
+    "version": "1.0.0",
+    "action": {
+        "default_popup": "./popup/index.html"
+    },
+    "background": {
+        "service_worker": "./background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://pro.guap.ru/inside_s"
+            ],
+            "js": [
+                "remove_vacination.js"
+            ],
+            "runAt": "document_idle"
+        }
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "webNavigation",
+        "scripting"
+    ]
+}

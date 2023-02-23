@@ -1,0 +1,13 @@
+:root {
+    --color-dark: #222;
+    --color-white: #dbd2b3;
+}
+
+html {
+    width: 300px;
+    height: 450px;
+}
+
+body {
+    background: var(--color-dark);
+}
