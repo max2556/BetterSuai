@@ -6,19 +6,17 @@
     "action": {
         "default_popup": "./popup/index.html"
     },
-    "background": {
-        "service_worker": "./background.js",
-        "type": "module"
-    },
     "content_scripts": [
         {
             "matches": [
                 "*://pro.guap.ru/inside_s"
             ],
             "js": [
-                "remove_vacination.js"
+                "betterSuai.js"
             ],
-            "runAt": "document_idle"
+            "css": [
+                "better_aside_menu.css"
+            ]
         }
     ],
     "host_permissions": [

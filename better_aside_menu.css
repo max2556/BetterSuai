@@ -1,0 +1,23 @@
+body {
+    --aside-menu-width: 250px;
+}
+
+/* Докидываем свои стили на меню*/
+body.page-small aside.betterSUAI#menu {
+    background: #ffffff;
+
+    width: var(--aside-menu-width);
+    margin-left: calc(-1 * var(--aside-menu-width));
+}
+body.show-sidebar.page-small aside.betterSUAI#menu {
+    z-index: 2;
+    margin-left: 0px;
+}
+
+/* Докидываем свои стили врапперу */
+.betterSUAI#wrapper {
+    z-index: 0;
+}
+body.show-sidebar.page-small .betterSUAI#wrapper {
+    margin-left: 0px;
+}
