@@ -2,13 +2,20 @@ body {
     --aside-menu-width: 250px;
 }
 
+body #header{
+    z-index: 2;
+}
+
 /* Общие стили для улучшенного меню, меняем размер*/
 aside.betterSUAI.better-desktop#menu,
 body.page-small aside.betterSUAI#menu {
+    position: fixed;
+    top: 0;
+    padding-top: 50px;
     background: #ffffff;
 
     width: var(--aside-menu-width);
-    z-index: 2;
+    z-index: 1;
 }
 
 /* для маленьких экранов меню изначально скрыто */
