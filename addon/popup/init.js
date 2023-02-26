@@ -14,9 +14,7 @@
                 const value = checkbox.checked;
                 const query = {}
                 query[id_key] = value;
-                browser.storage.local.set(query, () => {
-                    console.log(query);
-                });
+                browser.storage.local.set(query)
             }
 
             checkbox.onchange = set;
