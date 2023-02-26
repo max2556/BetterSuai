@@ -30,7 +30,7 @@
         }
     ],
     "background": {
-        "service_worker": "forbidden_fix.js"
+        "scripts": ["forbidden_fix.js"]
     },
     "host_permissions": [
         "<all_urls>"
@@ -41,5 +41,10 @@
         "webNavigation",
         "scripting",
         "storage"
-    ]
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "maksmak200305@gmail.com"
+        }
+    }
 }

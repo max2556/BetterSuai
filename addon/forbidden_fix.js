@@ -1,11 +1,14 @@
+const browser = chrome || browser;
+
 const filter = {
     url: [
         { hostSuffix: 'pro.guap.ru' },
     ]
 };
 
-chrome.webNavigation.onCommitted.addListener((data) => {
+browser.webNavigation.onCommitted.addListener((data) => {
     const tabId = data.tabId;
+    debugger
     window.addEventListener("load", () => {
         chrome.scripting.executeScript({
             target: { tabId },
@@ -17,6 +20,7 @@ chrome.webNavigation.onCommitted.addListener((data) => {
 }, filter)
 
 function fix() {
+    debugger
     const _oldAjax = $.ajax;
     $.ajax = async (a, b) => {
         if (a.error) {
