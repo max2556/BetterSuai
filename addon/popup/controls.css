@@ -1,0 +1,20 @@
+.controls .controls-item {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: space-around;
+
+    border: 1px #9800ff solid;
+    border-radius: 8px;
+    padding: 8px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.controls .controls-item .description{
+    width: 70%
+}

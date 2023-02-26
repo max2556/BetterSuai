@@ -1,6 +1,6 @@
 :root {
     --color-dark: #222;
-    --color-white: #dbd2b3;
+    --color-white: #e7e7e7;
 }
 
 html {
@@ -10,4 +10,11 @@ html {
 
 body {
     background: var(--color-dark);
+    color: var(--color-white);
+
+    font-size: 18px;
+}
+
+h1{
+    font-size: 18px;
 }

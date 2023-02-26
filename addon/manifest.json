@@ -39,11 +39,7 @@
         "activeTab",
         "tabs",
         "webNavigation",
-        "scripting"
-    ],
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "maksmak200305@gmail.com"
-        }
-    }
+        "scripting",
+        "storage"
+    ]
 }

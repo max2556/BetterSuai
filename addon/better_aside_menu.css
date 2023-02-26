@@ -2,22 +2,34 @@ body {
     --aside-menu-width: 250px;
 }
 
-/* Докидываем свои стили на меню*/
+/* Общие стили для улучшенного меню, меняем размер*/
+aside.betterSUAI.better-desktop#menu,
 body.page-small aside.betterSUAI#menu {
     background: #ffffff;
 
     width: var(--aside-menu-width);
+    z-index: 2;
+}
+
+/* для маленьких экранов меню изначально скрыто */
+body.page-small aside.betterSUAI#menu {
     margin-left: calc(-1 * var(--aside-menu-width));
 }
+/* для больших экранов меню скрыто, если на body висит класс hide-sidebar */
+body.hide-sidebar aside.betterSUAI.better-desktop#menu {
+    margin-left: calc(-1 * var(--aside-menu-width));
+}
+/* для маленьких экранов показываем меню, если на body висит класс show-hidebar */
 body.show-sidebar.page-small aside.betterSUAI#menu {
-    z-index: 2;
     margin-left: 0px;
 }
 
-/* Докидываем свои стили врапперу */
+/* wrapper - тело страницы */
 .betterSUAI#wrapper {
     z-index: 0;
 }
+
+.betterSUAI.better-desktop#wrapper,
 body.show-sidebar.page-small .betterSUAI#wrapper {
     margin-left: 0px;
 }

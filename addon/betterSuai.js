@@ -47,11 +47,20 @@
     }
 
     function better_aside_menu() {
-        const menu = document.querySelector("aside#menu"); // Ищем меню 
-        menu.classList.add("betterSUAI");                  // Накидываем свой класс, чтобы менять стили
+        const key = "aside-menu-switch";
+        
+        const browser = chrome || browser;
 
-        const wrapper = document.querySelector("div#wrapper") // Ищем "тело" сайта
-        wrapper.classList.add("betterSUAI");                  // на него тоже накидываем
+        browser.storage.local.get([key])
+            .then((value) => {
+                const menu = document.querySelector("aside#menu"); // Ищем меню 
+                menu.classList.add("betterSUAI");                  // Накидываем свой класс, чтобы менять стили
+                if (value[key]) menu.classList.add("better-desktop")
+
+                const wrapper = document.querySelector("div#wrapper") // Ищем "тело" сайта
+                wrapper.classList.add("betterSUAI");                  // на него тоже накидываем
+                if (value[key]) wrapper.classList.add("better-desktop");
+            });
     }
 
     function clear(node) {

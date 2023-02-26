@@ -5,16 +5,22 @@
         <title>BetterSUAI</title>
 
         <link rel="stylesheet" href="base.css" />
-        <!-- <script src="./storage.js" type="module"></script>
-        <script src="./URL_checker.js" type="module"></script>
-        <script src="./init.js" type="module"></script> -->
+        <link rel="stylesheet" href="switch.css" />
+        <link rel="stylesheet" href="controls.css" />
+
+        <script src="./init.js" type="module"></script>
     </head>
     <body>
         <div class="modal-header">
-            <h1 class="logo">
-                BetterSUAI
-                <span class="version">(1.0.0)</span>
-            </h1>
+            <div class="controls">
+                <div class="controls-item">
+                    <label class="switch">
+                        <input type="checkbox" class="checkbox" id="aside-menu-switch" />
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="description">Меню поверх контента на desktop версии</span>
+                </div>
+            </div>
         </div>
     </body>
 </html>
