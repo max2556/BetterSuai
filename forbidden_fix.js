@@ -23,7 +23,7 @@ function fix() {
             const original_error = a.error;
             a.error = (msg) => {
                 if (msg.status === 401) {
-                    window.location.replace("https://pro.guap.ru/exters");
+                    window.location.replace("https://pro.guap.ru/user/login");
                 }
                 original_error(msg)
             }
