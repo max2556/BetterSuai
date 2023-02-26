@@ -1,4 +1,4 @@
-Смешной аддон для фанатов pro.guap.ru
+## Смешной аддон для фанатов [pro.guap.ru](https://pro.guap.ru)
 
 
 Установка на Chrome:
