@@ -19,6 +19,19 @@
             ]
         }
     ],
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "*://pro.guap.ru/*"
+            ],
+            "resources": [
+                "forbidden_fix.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "forbidden_fix.js"
+    },
     "host_permissions": [
         "<all_urls>"
     ],
@@ -27,5 +40,10 @@
         "tabs",
         "webNavigation",
         "scripting"
-    ]
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "maksmak200305@gmail.com"
+        }
+    }
 }

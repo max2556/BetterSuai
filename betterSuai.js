@@ -1,5 +1,7 @@
 (function () {
-    window.addEventListener("load", onload_wait)
+    console.log("BetterSUAI приветствует вас...")
+
+    onload_wait();
 
     /**
      *  @brief основная функция
@@ -14,6 +16,7 @@
      *  @brief Костыль для ожидания загрузки всех модулей сайта
      */
     function onload_wait() {
+        console.log("Жду загрузки модулей");
         const div_wrapper = document.querySelector("#wrapper div");
         const body = document.body;
         let timeoutId = null;
@@ -38,7 +41,7 @@
     function disable_vacination() {
         const vacination = document.querySelector("#myModalVac");
         if (!vacination) return;
-            
+
         vacination.remove();
         console.log("Удалил вакцинацию");
     }
@@ -46,7 +49,7 @@
     function better_aside_menu() {
         const menu = document.querySelector("aside#menu"); // Ищем меню 
         menu.classList.add("betterSUAI");                  // Накидываем свой класс, чтобы менять стили
-        
+
         const wrapper = document.querySelector("div#wrapper") // Ищем "тело" сайта
         wrapper.classList.add("betterSUAI");                  // на него тоже накидываем
     }
